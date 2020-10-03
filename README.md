@@ -6,7 +6,7 @@ Initial app to push data to, http://open-bible.scoollabs.com/books
 
 No security yet, so we need to encode only correct data. For reference, here's the source we copied from https://www.bible.com/bible/1/GEN.1.KJV
 
-## api
+## API
 
 We will publish it at http://open-bible.scoollabs.com/api/get_books
 
