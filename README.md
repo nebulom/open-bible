@@ -16,4 +16,4 @@ We will add more functions to it soon, as we need it.
 
 ## Others
 
-We stopped pushing data to scoollabs.com since it's getting a lot of traffic and it's getting slow. We need to move to another domain, or find a new free one.
+We stopped pushing data to scoollabs.com since it's getting a lot of traffic and it's getting slow. It's a crappy site I bought anyway. We need to move to another domain, or find a new free one.
