@@ -8,9 +8,9 @@ For reference, encoders should check here, https://www.bible.com/bible/1/GEN.1.K
 
 ## API
 
-Sample of getting books is at http://open-bible.scoollabs.com/api/get_books
+Sample of getting books is at ~~http://open-bible.scoollabs.com/api/get_books~~
 
-Or getting the chapters of Genesis, http://open-bible.scoollabs.com/api/get_chapters?book=Genesis
+Or getting the chapters of Genesis, ~~http://open-bible.scoollabs.com/api/get_chapters?book=Genesis~~
 
 We will add more functions to it soon, as we need it.
 
