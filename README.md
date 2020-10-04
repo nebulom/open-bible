@@ -15,3 +15,7 @@ We will add more functions to it soon, as we need it.
 ## Others
 
 Other plans include making an app for Ubuntu Touch using these JSON files and open this to everyone soon.
+
+![OpenBibile Logo](/public/img/logo.png)
+
+Soon in OpenStore.
