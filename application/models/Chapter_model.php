@@ -32,6 +32,7 @@ class Chapter_model extends CI_Model {
 
   function save($chapter) {
     $this->db->insert('chapters', $chapter);
+    return $this->inserted_id();
   }
 
   function update($chapter, $id) {

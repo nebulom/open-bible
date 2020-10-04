@@ -39,11 +39,12 @@ class Api extends CI_Controller {
       $book = $this->book_model->read_by_name($book_name);
       if ($book) {
         $chapter = chapter_form($book->id);
-        if (!$this->chapter_model->read_by_title($chapter['title'], $book_name)) {
-          $this->chapter_model->save($chapter);
-          echo json_encode(array('status' => 'OK'));
+        $c = $this->chapter_model->read_by_title($chapter['title'], $book_name);
+        if (!$c) {
+          $chapter_id = $this->chapter_model->save($chapter);
+          echo json_encode(array('status' => 'OK', 'title' => $chapter['title']));
         } else {
-          echo json_encode(array('status' => 'Chapter exists'));
+          echo json_encode(array('status' => 'Chapter exists', 'title' => $c->title));
         }
       } else {
         echo json_encode(array('status' => 'Book not found'));
