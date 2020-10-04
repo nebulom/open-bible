@@ -2,7 +2,7 @@
 
 This is an initial attempt to encode bible data ang hopefully to open it as JSON file so it's friendly to apps for consumption.
 
-Initial app goes to, http://open-bible.scoollabs.com/ It's not readable for the books that are already encoded. Work is still in progress for other books. See issues here, https://github.com/nebulom/open-bible/issues
+Initial app goes to, http://open-bible.scoollabs.com/ Books that are not encoded yet are not readable. Work is still in progress for other books. See issues here, https://github.com/nebulom/open-bible/issues
 
 For reference, encoders should check here, https://www.bible.com/bible/1/GEN.1.KJV 
 
