@@ -2,7 +2,7 @@
 
 This is an initial attempt to encode bible data ang hopefully to open it as JSON file so it's friendly to apps for consumption.
 
-Initial app goes to, http://open-bible.scoollabs.com
+Initial web app is hosted here, http://open-bible.scoollabs.com
 
 ## API
 
@@ -14,7 +14,7 @@ We will add more functions to it soon, as we need it.
 
 ## Others
 
-Other plans include making an app for Ubuntu Touch using these JSON files and open this to everyone soon.
+Other plans include making an app for Ubuntu Touch using these JSON files and open this to everyone.
 
 ![OpenBibile Logo](/public/img/logo.png)
 
