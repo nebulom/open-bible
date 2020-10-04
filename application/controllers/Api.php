@@ -19,61 +19,61 @@ class Api extends CI_Controller {
     force_download($file, $backup);
   }
 
-  function save_book() {
-    if ($this->input->post()) {
-      $book = book_form();
-      if (!$this->book_model->read_by_name($book['name'])) {
-        $this->book_model->save($book);
-        echo json_encode(array('status' => 'OK'));
-      } else {
-        echo json_encode(array('status' => 'Book exists'));
-      }
-    } else {
-      echo json_encode(array('status' => 'Request should be POST'));
-    }
-  }
-
-  function save_chapter() {
-    if ($this->input->post()) {
-      $book_name = $this->input->post('book');
-      $book = $this->book_model->read_by_name($book_name);
-      if ($book) {
-        $chapter = chapter_form($book->id);
-        $c = $this->chapter_model->read_by_title($chapter['title'], $book_name);
-        if (!$c) {
-          $chapter_id = $this->chapter_model->save($chapter);
-          echo json_encode(array('status' => 'OK', 'title' => $chapter['title']));
-        } else {
-          echo json_encode(array('status' => 'Chapter exists', 'title' => $c->title));
-        }
-      } else {
-        echo json_encode(array('status' => 'Book not found'));
-      }
-    } else {
-      echo json_encode(array('status' => 'Request should be POST'));
-    }
-  }
-
-  function save_verse() {
-    if ($this->input->post()) {
-      $book_name = $this->input->post('book');
-      $chapter_title = $this->input->post('chapter');
-      $chapter = $this->chapter_model->read_by_title($chapter_title, $book_name);
-      if ($chapter) {
-        $verse = verse_form($chapter->id);
-        if (!$this->verse_model->read_by_number($verse['number'], $chapter->id)) {
-          $this->verse_model->save($verse);
-          echo json_encode(array('status' => 'OK'));
-        } else {
-          echo json_encode(array('status' => 'Verse exists'));
-        }
-      } else {
-        echo json_encode(array('status' => 'Chapter not found'));
-      }
-    } else {
-      echo json_encode(array('status' => 'Request should be POST'));
-    }
-  }
+  // function save_book() {
+  //   if ($this->input->post()) {
+  //     $book = book_form();
+  //     if (!$this->book_model->read_by_name($book['name'])) {
+  //       $this->book_model->save($book);
+  //       echo json_encode(array('status' => 'OK'));
+  //     } else {
+  //       echo json_encode(array('status' => 'Book exists'));
+  //     }
+  //   } else {
+  //     echo json_encode(array('status' => 'Request should be POST'));
+  //   }
+  // }
+  //
+  // function save_chapter() {
+  //   if ($this->input->post()) {
+  //     $book_name = $this->input->post('book');
+  //     $book = $this->book_model->read_by_name($book_name);
+  //     if ($book) {
+  //       $chapter = chapter_form($book->id);
+  //       $c = $this->chapter_model->read_by_title($chapter['title'], $book_name);
+  //       if (!$c) {
+  //         $chapter_id = $this->chapter_model->save($chapter);
+  //         echo json_encode(array('status' => 'OK', 'title' => $chapter['title']));
+  //       } else {
+  //         echo json_encode(array('status' => 'Chapter exists', 'title' => $c->title));
+  //       }
+  //     } else {
+  //       echo json_encode(array('status' => 'Book not found'));
+  //     }
+  //   } else {
+  //     echo json_encode(array('status' => 'Request should be POST'));
+  //   }
+  // }
+  //
+  // function save_verse() {
+  //   if ($this->input->post()) {
+  //     $book_name = $this->input->post('book');
+  //     $chapter_title = $this->input->post('chapter');
+  //     $chapter = $this->chapter_model->read_by_title($chapter_title, $book_name);
+  //     if ($chapter) {
+  //       $verse = verse_form($chapter->id);
+  //       if (!$this->verse_model->read_by_number($verse['number'], $chapter->id)) {
+  //         $this->verse_model->save($verse);
+  //         echo json_encode(array('status' => 'OK'));
+  //       } else {
+  //         echo json_encode(array('status' => 'Verse exists'));
+  //       }
+  //     } else {
+  //       echo json_encode(array('status' => 'Chapter not found'));
+  //     }
+  //   } else {
+  //     echo json_encode(array('status' => 'Request should be POST'));
+  //   }
+  // }
 
   function get_books() {
     $books = $this->book_model->find_all();
